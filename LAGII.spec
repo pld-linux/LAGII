@@ -1,7 +1,7 @@
 Name:		LAGII
 Summary:	Interprets and runs AGI games
 Summary(pl):	Interpretuje i uruchamia gry AGI
-Version:	0.1.1
+Version:	0.1.5
 Release:	1
 Group:		Games
 Group(pl):	Gry
