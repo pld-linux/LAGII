@@ -6,7 +6,7 @@ Release:	1
 Group:		Console/Games
 Vendor:		XoXus <xoxus@usa.net>
 Copyright:	Freely distributable
-Source:		http://www.zip.com.au/~gsymonds/LAGII/LAGII-0.1.1.tar.gz
+Source:		http://www.zip.com.au/~gsymonds/LAGII/LAGII-0.1.1.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 Requires:	svgalib
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -23,26 +23,28 @@ i Police Quest. Mo¿esz tak¿e zdekompilowaæ pliki AGI LOGIC i zobaczyæ
 jak dzia³a dana gra.
 
 %prep
-%setup
+%setup -q
 
 %build
-./configure \
-	--prefix=%prefix \
+%configure \
 	--with-no-giflib
 make depend
-make
+make CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install
+install -d $RPM_BUILD_ROOT%{_bindir}
+
+install -s src/lagii $RPM_BUILD_ROOT%{_bindir}/
+install -s decomp/decomp $RPM_BUILD_ROOT%{_bindir}/
+
+gzip -9nf doc/DRIVER-HOWTO doc/FAQ doc/README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%{prefix}/bin/lagii
-%{prefix}/bin/decomp
-
-%doc doc/DRIVER-HOWTO
-%doc doc/FAQ
-%doc doc/README
+%defattr(644,root,root,755)
+%doc doc/{DRIVER-HOWTO,FAQ,README}.gz
+%{_bindir}/lagii
+%{_bindir}/decomp
