@@ -7,6 +7,7 @@ License:	freely distributable
 Group:		Applications/Games
 Vendor:		XoXus <xoxus@usa.net>
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
+# Source0-md5:	deafc7baed2bad73b6761c376dceff93
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 BuildRequires:	svgalib-devel
 ExclusiveArch:	%{ix86} alpha
