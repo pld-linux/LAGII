@@ -10,7 +10,6 @@ Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
 # Source0-md5:	deafc7baed2bad73b6761c376dceff93
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 BuildRequires:	svgalib-devel
-ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +31,8 @@ jak dzia³a dana gra.
 %configure2_13 \
 	--with-no-giflib
 %{__make} depend
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
