@@ -38,13 +38,11 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install src/lagii decomp/decomp $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf doc/DRIVER-HOWTO doc/FAQ doc/README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/{DRIVER-HOWTO,FAQ,README}.gz
+%doc doc/{DRIVER-HOWTO,FAQ,README}
 %attr(755,root,root) %{_bindir}/lagii
 %attr(755,root,root) %{_bindir}/decomp
