@@ -1,13 +1,13 @@
-Name:		LAGII
 Summary:	Interprets and runs AGI games
 Summary(pl):	Interpretuje i uruchamia gry AGI
+Name:		LAGII
 Version:	0.1.5
-Release:	1
+Release:	2
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
 Group(pl):	Aplikacje/Gry
 Vendor:		XoXus <xoxus@usa.net>
-Copyright:	Freely distributable
+License:	Freely distributable
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 Requires:	svgalib
@@ -29,7 +29,7 @@ jak dzia³a dana gra.
 %setup -q
 
 %build
-%configure \
+%configure2_13 \
 	--with-no-giflib
 %{__make} depend
 %{__make} CFLAGS="%{rpmcflags}"
