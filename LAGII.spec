@@ -9,6 +9,7 @@ Vendor:		XoXus <xoxus@usa.net>
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 BuildRequires:	svgalib-devel
+ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
