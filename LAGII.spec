@@ -1,5 +1,6 @@
 Name:		LAGII
 Summary:	Interprets and runs AGI games
+Summary(pl):	Interpretuje i uruchamia gry AGI
 Version:	0.1.1
 Release:	1
 Group:		Console/Games
@@ -14,6 +15,12 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 LAGII interprets and runs AGI games under SVGALib. AGI games include most
 of Sierra's classics, including Kings Quest, Space Quest and Police Quest.
 You can also decompile the AGI LOGIC files and see how the game works.
+
+%description -l pl
+LAGII interpretuje i uruchamia gry AGI pod SVGALib. Gry AGI zawieraj±
+wiêkszo¶æ klasycznych gier Sierray w³±czaj±c Kings Quest, Space Quest 
+i Police Quest. Mo¿esz tak¿e zdekompilowaæ pliki AGI LOGIC i zobaczyæ
+jak dzia³a dana gra.
 
 %prep
 %setup
