@@ -3,8 +3,9 @@ Summary:	Interprets and runs AGI games
 Summary(pl):	Interpretuje i uruchamia gry AGI
 Version:	0.1.5
 Release:	1
-Group:		Games
-Group(pl):	Gry
+Group:		Applications/Games
+Group(de):	Applikationen/Spiele
+Group(pl):	Aplikacje/Gry
 Vendor:		XoXus <xoxus@usa.net>
 Copyright:	Freely distributable
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
@@ -31,14 +32,13 @@ jak dzia³a dana gra.
 %configure \
 	--with-no-giflib
 %{__make} depend
-%{__make} CFLAGS="$RPM_OPT_FLAGS"
+%{__make} CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -s src/lagii $RPM_BUILD_ROOT%{_bindir}/
-install -s decomp/decomp $RPM_BUILD_ROOT%{_bindir}/
+install src/lagii decomp/decomp $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf doc/DRIVER-HOWTO doc/FAQ doc/README
 
