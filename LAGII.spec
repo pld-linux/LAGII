@@ -3,14 +3,14 @@ Summary(pl):	Interpretuje i uruchamia gry AGI
 Name:		LAGII
 Version:	0.1.5
 Release:	2
+License:	Freely distributable
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
 Group(pl):	Aplikacje/Gry
 Vendor:		XoXus <xoxus@usa.net>
-License:	Freely distributable
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
-Requires:	svgalib
+BuildRequires:	svgalib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
