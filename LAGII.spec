@@ -9,7 +9,7 @@ Copyright:	Freely distributable
 Source:		http://www.zip.com.au/~gsymonds/LAGII/LAGII-0.1.1.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
 Requires:	svgalib
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 LAGII interprets and runs AGI games under SVGALib. AGI games include most
