@@ -5,8 +5,6 @@ Version:	0.1.5
 Release:	2
 License:	Freely distributable
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Vendor:		XoXus <xoxus@usa.net>
 Source0:	http://www.zip.com.au/~gsymonds/LAGII/%{name}-%{version}.tar.bz2
 URL:		http://www.zip.com.au/~gsymonds/LAGII/
